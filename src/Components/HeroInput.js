@@ -20,25 +20,30 @@ const HeroInput = () => {
   const onSubmit = data => console.log(data);
   return (
     <Center
-      shadow={'xl'}
+      alignSelf={{ base: 'center', md: 'start' }}
+      shadow={'2xl'}
       flexDirection="row"
-      rounded="md"
+      rounded="lg"
       alignItems={'center'}
-      m="1rem"
+      m={{ base: '0.4rem', md: '2rem' }}
+      h={{ base: '3rem', md: '4rem' }}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
         <Center>
-          <FormControl bg="white">
+          <FormControl bg="white" roundedLeft="lg" border="0px solid white">
             <Input
-              rounded="md"
-              color="gray.300"
-              borderColor="white"
-              w="20rem"
-              h="4rem"
+              roundedLeft="lg"
+              fontSize={{ base: 'sm', md: 'md' }}
+              w={{ base: '50vw', md: '16vw' }}
+              h={{ base: '3rem', md: '4rem' }}
               bg="white"
               id="email"
+              textColor="gray.600"
               type="email"
               placeholder="Enter Your Email"
+              _placeholder={{
+                color: 'gray.200',
+              }}
               _hover={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
               _active={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
               _focus={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
@@ -51,9 +56,10 @@ const HeroInput = () => {
           <Box
             as="button"
             color="white"
-            rounded="md"
-            h="full"
-            p="1.2rem 1.8rem"
+            rounded="lg"
+            fontSize={{ base: 'sm', md: 'md' }}
+            h={'full'}
+            p={{ base: '0.8rem 1.2rem', md: '1.2rem 1.8rem' }}
             backgroundColor="brand.300"
             _hover={{
               bg: 'blue.300',

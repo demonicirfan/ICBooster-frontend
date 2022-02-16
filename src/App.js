@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/test" element={<Result />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </ChakraProvider>

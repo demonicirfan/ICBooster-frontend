@@ -9,27 +9,32 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
+import AboutTheTec from '../Components/AboutTheTec';
+import FAQ from '../Components/FAQ';
 import HeroInput from '../Components/HeroInput';
 import DNA from '../Images/DNA.png';
 
 const Home = () => {
   return (
-    <Container border="2px solid pink" maxW="8xl">
+    <Container maxW="8xl" pt={{ base: '3rem', md: '2rem' }}>
       <Stack
         direction={['column', 'column', 'row']}
-        border="2px solid yellow"
         w="full"
+        justify={'space-between'}
+        alignItems="center"
+        spacing={{ base: '6rem', md: '0' }}
       >
         <VStack
-          border="2px solid purple"
+          gap={{ base: '1rem', md: '2rem' }}
           textAlign={['center', 'center', 'left']}
-          maxW={['70vw', '50vw', '36vw']}
-          alignItems="center"
+          maxW={['80vw', '70vw', '36vw']}
+          alignItems={{ base: 'center', md: 'start' }}
           justify="center"
           mx="auto"
+          mt={{ base: '4rem', md: '0' }}
         >
           <Heading
-            fontSize={['3xl', '5xl', '7xl']}
+            fontSize={['3xl', '4xl', '4xl', '7xl']}
             fontWeight="600"
             alignItems={['center', 'center', 'left']}
           >
@@ -38,6 +43,8 @@ const Home = () => {
           <Text
             textAlign={['center', 'center', 'left']}
             fontSize={['xs', 'xs', 'sm']}
+            textColor="gray.600"
+            maxW="34rem"
           >
             Estime a probabilidade de um paciente desenvolver Insuficiência
             Cardíaca nos próximos 5 anos com base nos seus dados clínicos e
@@ -46,57 +53,36 @@ const Home = () => {
           <HeroInput />
         </VStack>
         <Stack
-          w="full"
-          border="2px solid green"
-          justifyContent={'center'}
+          ml="auto"
+          w="fit-content"
+          justifyContent={'right'}
           alignItems="center"
           direction={['column', 'column', 'row']}
         >
           <Center
-            h={['10rem', '10rem', '0rem']}
-            w={['8rem', '10rem', '16rem']}
-            border="2px solid red"
+            h={['8rem', '8rem', '0rem']}
+            w={['8rem', '8rem', '12rem', '16rem']}
+            transform={[
+              'translateY(30px)',
+              'translateY(40px)',
+              'translateX(120px)',
+            ]}
           >
             <Image src={DNA} zIndex="1" overflow={'visible'} />
           </Center>
           <Box
-            w="20rem"
-            h="50rem"
-            transform={[
-              'translateY(-30px)',
-              'translateY(-40px)',
-              'translateX(-120px)',
-            ]}
+            minW={['90vw', '80vw', '24vw']}
+            h={['40vh', '50vh', '90vh']}
+            bg="brand.300"
+            rounded="2xl"
+            alignSelf={'right'}
           >
-            <svg
-              width="24vw"
-              height="80vh"
-              viewBox="0 0 511 893"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="511" height="893" rx="28" fill="#A8D0FF" />
-              <path
-                d="M510.5 413.5C338.1 367.1 98.8333 608.5 2.5 735L0.5 866L5.5 881.5L16.5 890.5L63 892.5C135.667 893.333 304.6 892.5 401 890.5C497.4 888.5 510.5 879.5 510.5 790V413.5Z"
-                fill="url(#paint0_linear_14_67)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_14_67"
-                  x1="255.5"
-                  y1="407.658"
-                  x2="406"
-                  y2="872.5"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#8CC0FD" />
-                  <stop offset="1" stop-color="#A8D0FF" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <Center bg="brand.200" w="full" h="full" />
           </Box>
         </Stack>
       </Stack>
+      <AboutTheTec />
+      <FAQ />
     </Container>
   );
 };

@@ -2,28 +2,34 @@ import React from 'react';
 import Logo from './Logo';
 import { IoLogoInstagram } from 'react-icons/io';
 import { FiTwitter, FiFacebook } from 'react-icons/fi';
-import { Container, Flex, HStack, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, HStack, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <Container maxW={'8xl'}>
-      <HStack>
-        <HStack spacing="2rem">
+    <Container
+      minW="99vw"
+      position="absolute"
+      zIndex="10"
+      pt={{ base: '0rem', md: '1rem' }}
+    >
+      <HStack mx="auto" maxW="8xl">
+        <HStack spacing={{ base: '0.5rem', md: '2rem' }}>
           <a href="#">
-            <FiTwitter size={28} />
+            <FiTwitter size={24} />
           </a>
           <a href="#">
-            <FiFacebook size={28} />
+            <FiFacebook size={24} />
           </a>
           <a href="#">
-            <IoLogoInstagram size={32} />
+            <IoLogoInstagram size={28} />
           </a>
         </HStack>
         <Flex
+          w={'full'}
           alignItems={'center'}
-          w="full"
-          justifyContent={'space-between'}
-          mr="4rem"
+          justifyContent={{ base: 'flex-end', md: 'space-between' }}
+          mr={{ base: '0rem', md: '4rem' }}
         >
           <Logo />
         </Flex>
