@@ -12,6 +12,8 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Result from './Result';
 
+const randomNumber = Math.floor(Math.random() * 100 + 1);
+
 const TestForm = () => {
   const [isVisible, setIsVisible] = useState(1);
   const [heading, setHeading] = useState('');
@@ -21,7 +23,6 @@ const TestForm = () => {
     formState: { isSubmitting },
   } = useForm();
 
-  const randomNumber = Math.floor(Math.random() * 100 + 1);
 
   useEffect(() => {
     if (isVisible === 1) {
@@ -73,6 +74,13 @@ const TestForm = () => {
                 Idade
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="idade"
                 placeholder="Idade"
@@ -85,7 +93,19 @@ const TestForm = () => {
               <FormLabel htmlFor="Number" fontSize="xl" fontWeight={'300'}>
                 ESV
               </FormLabel>
-              <Input h="3rem" id="esv" placeholder="ESV" {...register('esv')} />
+              <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
+                h="3rem"
+                id="esv"
+                placeholder="ESV"
+                {...register('esv')}
+              />
             </FormControl>
           )}
           {isVisible === 3 && (
@@ -94,6 +114,13 @@ const TestForm = () => {
                 ESSV
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="essv"
                 placeholder="ESSV"
@@ -107,6 +134,13 @@ const TestForm = () => {
                 IMVE
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="imve"
                 placeholder="IMVE"
@@ -119,7 +153,19 @@ const TestForm = () => {
               <FormLabel htmlFor="Number" fontSize="xl" fontWeight={'300'}>
                 VAE
               </FormLabel>
-              <Input h="3rem" id="vae" placeholder="VAE" {...register('vae')} />
+              <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
+                h="3rem"
+                id="vae"
+                placeholder="VAE"
+                {...register('vae')}
+              />
             </FormControl>
           )}
           {isVisible === 6 && (
@@ -128,6 +174,13 @@ const TestForm = () => {
                 Ureia
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="ureia"
                 placeholder="Ureia"
@@ -141,6 +194,13 @@ const TestForm = () => {
                 Creatinina
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="creatinina"
                 placeholder="Creatinina"
@@ -154,6 +214,13 @@ const TestForm = () => {
                 K+ sérico
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="ksérico"
                 placeholder="K+ sérico"
@@ -167,6 +234,13 @@ const TestForm = () => {
                 Colesterol Total
               </FormLabel>
               <Input
+                borderColor="gray.300"
+                _hover={{
+                  borderColor: 'gray.300',
+                }}
+                _placeholder={{
+                  color: 'gray.300',
+                }}
                 h="3rem"
                 id="colesterolTotal"
                 placeholder="Colesterol Total"
@@ -178,6 +252,7 @@ const TestForm = () => {
           {isVisible < 10 ? (
             <Button
               w="full"
+              color="white"
               mt={4}
               colorScheme="blue"
               isLoading={isSubmitting}

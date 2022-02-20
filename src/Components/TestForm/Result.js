@@ -6,16 +6,12 @@ export default function Result({ percentage }) {
   useEffect(() => {
     console.log(percentage);
     if (percentage <= 25) {
-      console.log('green');
-      setColors({ bgColor: '#E0FFDB', color: '#5EFF44' });
-    } else if (percentage <= 50) {
-      console.log('blue');
       setColors({ bgColor: '#A8D0FF', color: '#3991FF' });
+    } else if (percentage <= 50) {
+      setColors({ bgColor: '#E0FFDB', color: '#5EFF44' });
     } else if (percentage <= 75) {
-      console.log('orange');
       setColors({ bgColor: '#FFF3DB', color: '#FFC822' });
-    } else {
-      console.log('red');
+    } else if (percentage <= 100) {
       setColors({ bgColor: '#FFDBDB', color: '#FF6363' });
     }
   }, []);
