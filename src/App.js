@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import Error from './Pages/Error';
 import Result from './Pages/Result';
+import Footer from './Components/Footer';
 
 export const newTheme = {
   ...theme,
@@ -22,6 +23,7 @@ function App() {
         <Route path="/test" element={<Result />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </ChakraProvider>
   );
 }

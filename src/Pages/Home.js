@@ -12,11 +12,12 @@ import React from 'react';
 import AboutTheTec from '../Components/AboutTheTec';
 import FAQ from '../Components/FAQ';
 import HeroInput from '../Components/HeroInput';
+import TakeTest from '../Components/TakeTest';
 import DNA from '../Images/DNA.png';
 
 const Home = () => {
   return (
-    <Container maxW="8xl" pt={{ base: '3rem', md: '2rem' }}>
+    <Container maxW="8xl" pt={{ base: '4rem', md: '2.6rem' }}>
       <Stack
         direction={['column', 'column', 'row']}
         w="full"
@@ -50,7 +51,8 @@ const Home = () => {
             Cardíaca nos próximos 5 anos com base nos seus dados clínicos e
             complementares
           </Text>
-          <HeroInput />
+          {/*<HeroInput />*/}
+          <TakeTest />
         </VStack>
         <Stack
           ml="auto"
@@ -77,7 +79,20 @@ const Home = () => {
             rounded="2xl"
             alignSelf={'right'}
           >
-            <Center bg="brand.200" w="full" h="full" />
+            <Center bg="brand.200" w="full" h="full" alignItems={'end'}>
+              <Box rounded="2xl" overflow="hidden">
+                <svg
+                  viewBox="0 0 511 486"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M510.5 6.5C338.1 -39.9 98.8333 201.5 2.5 328L0.5 459L5.5 474.5L16.5 483.5L63 485.5C135.667 486.333 304.6 485.5 401 483.5C497.4 481.5 510.5 472.5 510.5 383V6.5Z"
+                    fill="#93C4FE"
+                  />
+                </svg>
+              </Box>
+            </Center>
           </Box>
         </Stack>
       </Stack>

@@ -12,7 +12,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 import React from 'react';
-import picture from '../Images/DNA.png';
+import picture from '../Images/plus.png';
 const Data = [
   {
     question: 'O que é ICBooster?',
@@ -63,8 +63,8 @@ const FAQ = () => {
         <Accordion w="full" fontSize={{ base: 'xs', md: 'sm' }}>
           {Data.map(item => (
             <AccordionItem px={{ base: '0', md: '1rem' }}>
-              <Text fontSize={{ base: 'sm', md: 'md' }} py='0.5rem'>
-                <AccordionButton h="4rem">
+              <Text fontSize={{ base: 'sm', md: 'md' }} py="0.5rem">
+                <AccordionButton h="5rem">
                   <Box flex="1" textAlign="left">
                     {item.question}
                   </Box>
@@ -78,8 +78,8 @@ const FAQ = () => {
           ))}
         </Accordion>
       </Center>
-      <Center py='2rem'>
-        <Image src={picture} h="20rem" />
+      <Center py="2rem">
+        <Image src={picture} h={{ base: '20rem', md: '26rem' }} />
       </Center>
     </Stack>
   );
