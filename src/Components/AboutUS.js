@@ -1,4 +1,4 @@
-import { Heading, Image, Text, VStack, Box, Flex } from '@chakra-ui/react';
+import { Heading, Image, Text, VStack,  Flex } from '@chakra-ui/react';
 import React from 'react';
 import DNA from '../Images/DNA.png';
 const Data = [

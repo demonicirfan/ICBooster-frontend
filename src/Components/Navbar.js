@@ -2,8 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import { IoLogoInstagram } from 'react-icons/io';
 import { FiTwitter, FiFacebook } from 'react-icons/fi';
-import { Box, Container, Flex, HStack, Text } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import {  Container, Flex, HStack } from '@chakra-ui/react';
 
 const Navbar = () => {
   return (

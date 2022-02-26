@@ -4,7 +4,6 @@ import Pie from './Pie';
 export default function Result({ percentage }) {
   const [colors, setColors] = useState({ bgColor: 'white', color: 'black' });
   useEffect(() => {
-    console.log(percentage);
     if (percentage <= 25) {
       setColors({ bgColor: '#A8D0FF', color: '#3991FF' });
     } else if (percentage <= 50) {

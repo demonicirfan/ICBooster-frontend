@@ -4,13 +4,12 @@ import {
   Box,
   Text,
   FormControl,
-  FormLabel,
   FormErrorMessage,
-  FormHelperText,
 } from '@chakra-ui/react';
+import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HeroInput = () => {
   const navigate = useNavigate();
@@ -21,6 +20,10 @@ const HeroInput = () => {
   } = useForm();
   const onSubmit = data => {
     console.log(data);
+    axios
+      .post('/api/email', data)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
     navigate('/test');
   };
   return (

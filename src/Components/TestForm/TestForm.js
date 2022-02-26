@@ -43,7 +43,7 @@ const TestForm = () => {
     } else {
       return new Promise(resolve => {
         setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
+         // console.log(JSON.stringify(values, null, 2));
           setIsVisible(10);
           resolve();
         }, 3000);

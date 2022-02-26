@@ -1,4 +1,4 @@
-import { Box, Center, Container, Text } from '@chakra-ui/react';
+import { Box, Center, Container } from '@chakra-ui/react';
 import React from 'react';
 import TestForm from '../Components/TestForm/TestForm';
 
