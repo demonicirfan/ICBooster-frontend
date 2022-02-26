@@ -10,20 +10,21 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import AboutTheTec from '../Components/AboutTheTec';
+import AboutUS from '../Components/AboutUS';
 import FAQ from '../Components/FAQ';
 import HeroInput from '../Components/HeroInput';
-import TakeTest from '../Components/TakeTest';
 import DNA from '../Images/DNA.png';
 
 const Home = () => {
   return (
-    <Container maxW="8xl" pt={{ base: '4rem', md: '2.6rem' }}>
+    <Container maxW="8xl" p={{ base: '1rem', xl: '0' }}>
       <Stack
         direction={['column', 'column', 'row']}
         w="full"
         justify={'space-between'}
         alignItems="center"
         spacing={{ base: '6rem', md: '0' }}
+        p={{ base: '2rem', md: '3rem 0rem' }}
       >
         <VStack
           gap={{ base: '1rem', md: '2rem' }}
@@ -32,6 +33,7 @@ const Home = () => {
           alignItems={{ base: 'center', md: 'start' }}
           justify="center"
           mx="auto"
+          w="full"
           mt={{ base: '4rem', md: '0' }}
         >
           <Heading
@@ -51,8 +53,7 @@ const Home = () => {
             Cardíaca nos próximos 5 anos com base nos seus dados clínicos e
             complementares
           </Text>
-          {/*<HeroInput />*/}
-          <TakeTest />
+          <HeroInput />
         </VStack>
         <Stack
           ml="auto"
@@ -78,9 +79,16 @@ const Home = () => {
             bg="brand.300"
             rounded="2xl"
             alignSelf={'right'}
+            overflow={{ base: 'hidden', md: 'none' }}
           >
-            <Center bg="brand.200" w="full" h="full" alignItems={'end'}>
-              <Box rounded="2xl" overflow="hidden">
+            <Center
+              bg="brand.200"
+              w="full"
+              minW={['90vw', '80vw', '24vw']}
+              h="full"
+              alignItems={'end'}
+            >
+              <Box rounded="xl" overflow="hidden">
                 <svg
                   viewBox="0 0 511 486"
                   fill="none"
@@ -98,6 +106,7 @@ const Home = () => {
       </Stack>
       <AboutTheTec />
       <FAQ />
+      <AboutUS />
     </Container>
   );
 };

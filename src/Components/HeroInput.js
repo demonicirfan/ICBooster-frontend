@@ -10,14 +10,19 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HeroInput = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    console.log(data);
+    navigate('/test');
+  };
   return (
     <Center
       alignSelf={{ base: 'center', md: 'start' }}
@@ -30,7 +35,12 @@ const HeroInput = () => {
     >
       <form onSubmit={handleSubmit(onSubmit)}>
         <Center>
-          <FormControl bg="white" roundedLeft="lg" border="0px solid white">
+          <FormControl
+            bg="white"
+            roundedLeft="lg"
+            border="0px solid white"
+            isRequired
+          >
             <Input
               roundedLeft="lg"
               fontSize={{ base: 'sm', md: 'md' }}
@@ -38,15 +48,15 @@ const HeroInput = () => {
               h={{ base: '3rem', md: '4rem' }}
               bg="white"
               id="email"
-              textColor="gray.600"
+              textColor="gray.500"
               type="email"
               placeholder="Enter Your Email"
               _placeholder={{
-                color: 'gray.200',
+                color: 'gray.400',
               }}
-              _hover={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
-              _active={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
-              _focus={{ borderColor: 'white', bg: 'white', color: 'gray.300' }}
+              _hover={{ borderColor: 'white', bg: 'white', color: 'gray.500' }}
+              _active={{ borderColor: 'white', bg: 'white', color: 'gray.500' }}
+              _focus={{ borderColor: 'white', bg: 'white', color: 'gray.500' }}
               {...register('email', { required: true })}
             />
             <FormErrorMessage>
@@ -56,6 +66,7 @@ const HeroInput = () => {
           <Box
             as="button"
             color="white"
+            action="submit"
             rounded="lg"
             fontSize={{ base: 'sm', md: 'md' }}
             h={'full'}
@@ -63,12 +74,14 @@ const HeroInput = () => {
             backgroundColor="brand.300"
             _hover={{
               bg: 'blue.300',
+              color: 'gray.200',
             }}
             _active={{
               bg: 'blue.300',
+              color: 'gray.200',
             }}
           >
-            Button
+            <Text w="5rem">Take Test</Text>
           </Box>
         </Center>
       </form>

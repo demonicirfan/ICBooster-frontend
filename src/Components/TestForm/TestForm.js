@@ -23,16 +23,15 @@ const TestForm = () => {
     formState: { isSubmitting },
   } = useForm();
 
-
   useEffect(() => {
     if (isVisible === 1) {
-      setHeading('Lets Start');
+      setHeading('Vamos começar');
     } else if (isVisible < 6) {
-      setHeading('Few More Details');
+      setHeading('Mais alguns detalhes');
     } else if (isVisible <= 8) {
-      setHeading('Almost there');
+      setHeading('Quase lá');
     } else if (isVisible === 9) {
-      setHeading('Last Step');
+      setHeading('Último passo');
     } else {
       setHeading('Resultado');
     }
@@ -60,11 +59,13 @@ const TestForm = () => {
       w="full"
     >
       {isVisible < 10 && <Text>Etapa {isVisible} de 9</Text>}
-      <Heading pt="1rem" fontWeight="500">
+      <Heading fontSize={{ base: '2xl', md: '3xl' }} p="1rem" fontWeight="500">
         {heading}
       </Heading>
       {isVisible === 10 && (
-        <Text>Probabilidade de desenvolver Insuficiência </Text>
+        <Text textAlign={'center'}>
+          Probabilidade de desenvolver Insuficiência{' '}
+        </Text>
       )}
       <Center my="auto" h={{ base: '50vh', md: 'full' }} w="100%">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -258,7 +259,7 @@ const TestForm = () => {
               isLoading={isSubmitting}
               type="submit"
             >
-              {isVisible === 9 ? 'Submit' : 'Próximo'}
+              {isVisible === 9 ? 'Enviar' : 'Próximo'}
             </Button>
           ) : (
             <Center>

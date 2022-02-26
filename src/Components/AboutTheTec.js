@@ -15,10 +15,6 @@ const AboutTheTec = () => {
         <Heading fontSize={{ base: '2xl', md: '5xl' }} fontWeight="500">
           Sobre a Tecnologia
         </Heading>
-        <Text fontSize={['xs', 'xs', 'sm']} textAlign="center" maxW="36rem" textColor='gray.600'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo
-          nisi, mauris integer pharetra, cras.{' '}
-        </Text>
       </VStack>
       <Wrap
         spacing={{ base: '1rem', md: '3rem' }}
@@ -30,9 +26,8 @@ const AboutTheTec = () => {
         {Data.map(card => (
           <VStack
             rounded="2xl"
-            outline="1px solid #F3F3F3"
+            border="1px solid #F3F3F3"
             bgGradient="linear(120deg, #bcbcbc28, #f4f4f470)"
-            border="2px solid gray.200"
             justify="space-around"
             p={{ base: '1.2rem', md: '2rem' }}
             spacing={{ base: '1rem', md: '2.4rem' }}
