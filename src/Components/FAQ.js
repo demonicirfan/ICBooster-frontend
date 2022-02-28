@@ -22,7 +22,7 @@ const Data = [
   {
     question: 'O ICBooster é uma ferramenta diagnóstica?',
     answer:
-      'De forma alguma. </b> ICBooster é um projeto que ainda se encontra em desenvolvimento, com o objetivo de complementar e otimizar o cuidado médico para seus pacientes',
+      'De forma alguma. ICBooster é um projeto que ainda se encontra em desenvolvimento, com o objetivo de complementar e otimizar o cuidado médico para seus pacientes',
   },
   {
     question:
@@ -62,8 +62,12 @@ const FAQ = () => {
       justifyContent="space-around"
     >
       <Center w={{ base: '90%', md: '44%' }} flexDirection={'column'}>
-        <Heading textAlign={'center'} fontSize={{ base: '3xl', md: '5xl' }} my="2rem">
-        Perguntas Frequentes
+        <Heading
+          textAlign={'center'}
+          fontSize={{ base: '3xl', md: '5xl' }}
+          my="2rem"
+        >
+          Perguntas Frequentes
         </Heading>
         <Accordion w="full" fontSize={{ base: 'xs', md: 'sm' }}>
           {Data.map(item => (

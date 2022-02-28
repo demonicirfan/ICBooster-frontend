@@ -21,7 +21,7 @@ const HeroInput = () => {
   const onSubmit = data => {
     console.log(data);
     axios
-      .post('/api/email', data)
+      .post('https://icbooster.herokuapp.com/api/email', data)
       .then(res => console.log(res))
       .catch(err => console.log(err));
     navigate('/test');
@@ -53,7 +53,7 @@ const HeroInput = () => {
               id="email"
               textColor="gray.500"
               type="email"
-              placeholder="Enter Your Email"
+              placeholder="Insira o Email"
               _placeholder={{
                 color: 'gray.400',
               }}
@@ -84,7 +84,7 @@ const HeroInput = () => {
               color: 'gray.200',
             }}
           >
-            <Text w="5rem">Take Test</Text>
+            Comece
           </Box>
         </Center>
       </form>

@@ -9,10 +9,10 @@ const Logo = () => {
       p={{ base: '1rem 0rem', md: '1rem' }}
       w={{ base: 'fit-content', md: 'full' }}
     >
-      <Text fontWeight={'600'}>ic</Text>
+      <Text fontWeight={'600'}>IC</Text>
       <Link to="/">
         <Text as="span" fontWeight={'200'}>
-          booster
+          Booster
         </Text>
       </Link>
     </Center>

@@ -43,7 +43,7 @@ const TestForm = () => {
     } else {
       return new Promise(resolve => {
         setTimeout(() => {
-         // console.log(JSON.stringify(values, null, 2));
+          // console.log(JSON.stringify(values, null, 2));
           setIsVisible(10);
           resolve();
         }, 3000);
@@ -63,9 +63,7 @@ const TestForm = () => {
         {heading}
       </Heading>
       {isVisible === 10 && (
-        <Text textAlign={'center'}>
-          Probabilidade de desenvolver Insuficiência{' '}
-        </Text>
+        <Text textAlign={'center'}>Risco de Insuficiência Cardíaca</Text>
       )}
       <Center my="auto" h={{ base: '50vh', md: 'full' }} w="100%">
         <form onSubmit={handleSubmit(onSubmit)}>
